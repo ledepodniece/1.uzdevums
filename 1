@@ -1,0 +1,13 @@
+class Customer:
+    def __init__(self, name, deposit_amount):
+        self.name = name
+        self.deposit_amount = deposit_amount
+
+    def calculate_percentages(self):
+        annual_interest_rate = 0.5 / 100  # 0.5% annual interest rate
+        return self.deposit_amount * annual_interest_rate
+
+# Example usage:
+customer = Customer("John Doe", 1000)
+interest = customer.calculate_percentages()
+print(f"{customer.name} will earn {interest} in interest per year.")
